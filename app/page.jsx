@@ -1,11 +1,8 @@
-import './App.css';
 import SideBar from './components/sideBar/sideBar';
-import Header from './components/header/Header';
-import RightList from './components/rightList/RightList';
-import Main from './components/main/Main';
-import BottomBar from './components/bottomBar/bottomBar';
-import 'tailwindcss/tailwind.css';
-import './Styles.css'
+import Header from './components/header/header';
+import rightList from './components/rightList/rightList';
+import Main from './components/main/main';
+// import BottomBar from './components/bottomBar/bottomBar';
 
 
 function App() {
@@ -15,20 +12,20 @@ function App() {
         <SideBar />
       </div>
       <div className='block md:hidden left-0'>
-        <BottomBar />
+        {/* <BottomBar /> */}
       </div>
       <div className='w-full h-full xl:ml-56'>
         <div className='flex justify-start md:justify-center  '>
           <div id='s25' className=' flex flex-col mx-auto w-full md:w-[630px]'>
             <div className='w-full  md:w-[630px] self-start'>
-              <Header className='h-52' />
+              <Header />
             </div>
             <div className='w-full md:w-[470px] self-center mt-10 '>
               <Main />
             </div>
           </div>
           <div className='w-96 h-[739px] hidden tablet:block'>
-            <RightList />
+            <rightList />
           </div>
         </div>
       </div>
