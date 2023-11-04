@@ -1,6 +1,7 @@
-
+import Image from 'next/image'
 import instagramLogoText from './../../assets/instagramLogoText.svg'
 import instagramLogo from './../../assets/instagramLogo.svg'
+import next from 'next'
 
 
 

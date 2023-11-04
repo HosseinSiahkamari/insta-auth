@@ -1,6 +1,6 @@
 import SideBar from './components/sideBar/sideBar';
 import Header from './components/header/header';
-import rightList from './components/rightList/rightList';
+import RightList from './components/rightList/rightList';
 import Main from './components/main/main';
 // import BottomBar from './components/bottomBar/bottomBar';
 
@@ -25,7 +25,7 @@ function App() {
             </div>
           </div>
           <div className='w-96 h-[739px] hidden tablet:block'>
-            <rightList />
+            <RightList />
           </div>
         </div>
       </div>

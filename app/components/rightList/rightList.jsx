@@ -1,4 +1,4 @@
-"use client"
+// "use client"
 
 import pexels01 from './../../assets/pexels01.jpg'
 import pexels02 from './../../assets/pexels02.jpg'
@@ -8,7 +8,7 @@ import pexels05 from './../../assets/pexels05.jpg'
 import pexels06 from './../../assets/pexels06.jpg'
 
 
-const rightList = () => {
+const RightList = () => {
 
     const imgArray = [
         { imgId: pexels02, profileName: 'Mary', content: 'Suggested for you', followStatus: 'follow' },
@@ -45,4 +45,4 @@ const rightList = () => {
     );
 }
 
-export default rightList;
+export default RightList;
