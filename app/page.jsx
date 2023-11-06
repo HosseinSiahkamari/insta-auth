@@ -1,6 +1,6 @@
 import SideBar from './components/sideBar/sideBar';
-import Header from './components/header/header';
-import RightList from './components/rightList/rightList';
+import Header from './components/Header/Header';
+import RightList from './components/RightList/RightList';
 import Main from './components/main/main';
 // import BottomBar from './components/bottomBar/bottomBar';
 

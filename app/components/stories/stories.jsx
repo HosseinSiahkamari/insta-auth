@@ -2,7 +2,7 @@
 
 import { faker } from '@faker-js/faker';
 import { useEffect, useState } from 'react';
-import Story from '../story/story'
+import Story from '../Story/Story'
 
 
 

@@ -33,8 +33,10 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    "app/components/stories/stories.jsx"
-, "app/components/rightList/rightList.jsx", "app/page.jsx"  ],
+    "app/components/Stories/Stories.jsx",
+    "app/components/RightList/RightList.jsx",
+    "app/page.jsx"
+  ],
   "exclude": [
     "node_modules"
   ]

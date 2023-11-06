@@ -1,4 +1,4 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import instagramLogoText from './../../assets/instagramLogoText.svg'
 import instagramLogo from './../../assets/instagramLogo.svg'
 import next from 'next'
@@ -24,8 +24,8 @@ const SideBar = () => {
 
     return (
         <div className=" h-screen">
-            <img src={instagramLogoText} className='w-28 ml-7 h-24 xl:block md:hidden sm:hidden ' alt="instagram-logo" />
-            <img src={instagramLogo} className='w-9 ml-5 h-24 xl:hidden md:block transition-transform duration-500' alt="instagram-logo" />
+            {/* <image src={instagramLogoText} className='w-28 ml-7 h-24 xl:block md:hidden sm:hidden ' alt="instagram-logo" />
+            <image src={instagramLogo} className='w-9 ml-5 h-24 xl:hidden md:block transition-transform duration-500' alt="instagram-logo" /> */}
             <div className=''>
                 {menuIconsLeft.map((item, index) => {
                     const isLastChild = index === menuIconsLeft.length - 2;

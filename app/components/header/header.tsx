@@ -1,5 +1,5 @@
 // import { MagnifyingGlassIcon } from "@heroicons/react/24/outline";
-import Stories from "../stories/stories"
+import Stories from "../Stories/Stories"
 
 
 

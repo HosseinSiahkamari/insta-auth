@@ -1,11 +1,12 @@
 import pexels01 from './../../assets/pexels01.jpg'
+import Image from 'next/image';
 
 
 const HeadMain = () => {
     return (
         <div className='flex justify-between items-center max-w-[470px] px-5 mx-auto h-8 bg-slate-100 rounded-md shadow-md'>
             <div className='flex'>
-                <img className='w-7 rounded-full' src={pexels01} alt="" />
+                <Image className='w-7 h-7 rounded-full' priority src={pexels01} alt="" />
                 <p className='mx-2'>ali</p>
             </div>
             <div>

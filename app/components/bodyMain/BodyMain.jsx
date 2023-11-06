@@ -1,11 +1,11 @@
-
+import Image from 'next/image';
 import pexels02 from './../../assets/pexels02.jpg'
 
 const BodyMain = () => {
-    return (
+    return ( 
         <div className='flex-col p-4'>
             <div className='max-w-[468px] mx-auto'>
-                <img src={pexels02} className='rounded-md borde-[1px]' alt="" />
+                <Image src={pexels02}  priority className=' rounded-md borde-[1px]' alt="picture" />
             </div>
             <div className='flex justify-between max-w-[468px] mx-auto h-10 items-center'>
                 <div className='flex'>

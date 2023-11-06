@@ -10,4 +10,4 @@ const Story = ({ avatar, username }) => {
         );
 }
 
-export default Story;
+export default Story; 
