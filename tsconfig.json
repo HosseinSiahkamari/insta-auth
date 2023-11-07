@@ -34,7 +34,7 @@
     "**/*.tsx",
     ".next/types/**/*.ts",
     "app/components/Stories/Stories.jsx",
-    "app/components/RightList/RightList.jsx",
+    "app/components/Suggestions/Suggestions.jsx",
     "app/page.jsx"
   ],
   "exclude": [

@@ -1,7 +1,8 @@
 import SideBar from './components/sideBar/sideBar';
 import Header from './components/Header/Header';
-import RightList from './components/RightList/RightList';
+import Suggestions from './components/Suggestions/Suggestions';
 import Main from './components/main/main';
+import MiniProfile from './components/MiniProfile/MiniProfile'
 // import BottomBar from './components/bottomBar/bottomBar';
 
 
@@ -25,7 +26,8 @@ function App() {
             </div>
           </div>
           <div className='w-96 h-[739px] hidden tablet:block'>
-            <RightList />
+            <MiniProfile />
+            <Suggestions />
           </div>
         </div>
       </div>
