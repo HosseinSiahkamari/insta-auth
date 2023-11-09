@@ -7,7 +7,7 @@ import Story from '../Story/Story'
 
 
 const Stories = () => {
-    const [suggestions, setSuggestions] = useState([]);
+    const [suggestion, setSuggestions] = useState([]);
     useEffect(() => {
         const suggestions = [...Array(20)].map((_, i) => ({
             userId: faker.string.uuid(),
@@ -19,8 +19,8 @@ const Stories = () => {
             registeredAt: faker.date.past(),
             key: i,
         }));
-        setSuggestions(suggestions);
-        console.log(suggestions[0].avatar);
+        setSuggestions(suggestion);
+        // console.log(suggestions[0].avatar);
     }, []);
 
 
@@ -80,7 +80,7 @@ const Stories = () => {
                 </button>
             </div>
             <div id='dynamicID' className="flex justify-start p-4  items-center h-28  w-screen md:w-full lg:w-full xl:w-full object-cover overflow-x-hidden">
-                {suggestions.map((item) => {
+                {suggestion.map((item) => {
                     return <Story className='' key={item.key} avatar={item.avatar} username={item.username} />
                 })}
             </div>

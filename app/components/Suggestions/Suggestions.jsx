@@ -1,6 +1,6 @@
 "use client"
 
-import { Faker, faker } from '@faker-js/faker'
+import { faker } from '@faker-js/faker'
 import { useEffect, useState } from 'react'
 
 import Image from 'next/image'
@@ -9,21 +9,32 @@ import Image from 'next/image'
 
 const Suggestions = () => {
 
-    const [sugesstions, setSugesstions]= useState([]);
-
-    useEffect(()=>{
-        const suggestions = [...Array(12)].map((_,i)=>({
-            avatar: faker.image-avatar(),
-            name: faker.firstName(),
-        }))
-    },[] )
-
+    const [suggestions, setSuggestions] = useState([]);
+    useEffect(() => {
+        const suggestions = [...Array(20)].map((_, i) => ({
+            userId: faker.string.uuid(),
+            username: faker.internet.userName(),
+            email: faker.internet.email(),
+            avatar: faker.image.url(),
+            password: faker.internet.password(),
+            birthdate: faker.date.birthdate(),
+            registeredAt: faker.date.past(),
+            key: i,
+        }));
+        setSuggestions(suggestions);
+        // console.log(suggestions[0].avatar);
+    }, []);
     
 
     return (
         <div className=''>
-            <h2>Suggestions</h2>
-            
+            {suggestions.map((item)=>(
+                <div key={item.key}>
+                    <img src="item.avatar" alt="picture" />
+                </div>
+
+            ))}
+
             {/* 
             <div className='flex items-center w-72 h-5 mt-10 mb-5'>
                 <div className='w-64 flex items-center '>
