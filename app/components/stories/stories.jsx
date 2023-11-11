@@ -7,9 +7,9 @@ import Story from '../Story/Story'
 
 
 const Stories = () => {
-    const [suggestion, setSuggestions] = useState([]);
+    const [suggestion, setSuggestion] = useState([]);
     useEffect(() => {
-        const suggestions = [...Array(20)].map((_, i) => ({
+        const suggestion = [...Array(20)].map((_, i) => ({
             userId: faker.string.uuid(),
             username: faker.internet.userName(),
             email: faker.internet.email(),
@@ -19,7 +19,7 @@ const Stories = () => {
             registeredAt: faker.date.past(),
             key: i,
         }));
-        setSuggestions(suggestion);
+        setSuggestion(suggestion);
         // console.log(suggestions[0].avatar);
     }, []);
 
