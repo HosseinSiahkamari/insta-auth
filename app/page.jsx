@@ -1,18 +1,16 @@
+
+
 import SideMenu from './components/sideMenu/sideMenu';
 import Header from './components/Header/Header';
 import Suggestions from './components/Suggestions/Suggestions';
 import Main from './components/main/main';
 import MiniProfile from './components/MiniProfile/MiniProfile'
 import BottomMenu from './components/bottomBar/bottomBar';
-import { SessionProvider, useSession, getSession } from 'next-auth/react';
-
-const { data: session } = useSession();
 
 
-function App({ Component,pageProps}) {
+function App() {
 
   return (
-    <SessionProvider session={session}>
       <div className='flex overflow-x-clip' >
         <div className=' md:w-20 xl:w-60 fixed  md:h-screen border-r-2 hidden w816:block left-0'>
           <SideMenu />
@@ -37,7 +35,6 @@ function App({ Component,pageProps}) {
           </div>
         </div>
       </div>
-    </SessionProvider >
   );
 }
 

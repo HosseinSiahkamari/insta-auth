@@ -12,10 +12,11 @@
     "@heroicons/react": "^2.0.18",
     "firebase": "^10.6.0",
     "heroicons": "^2.0.18",
-    "next": "14.0.1",
+    "next": "^14.0.2",
     "next-auth": "^4.24.5",
-    "react": "^18",
-    "react-dom": "^18"
+    "openssl": "^2.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
   },
   "devDependencies": {
     "@faker-js/faker": "^8.2.0",

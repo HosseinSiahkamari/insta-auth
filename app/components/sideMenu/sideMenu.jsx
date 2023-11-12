@@ -1,8 +1,6 @@
-"use client" 
+"use client";
 
-import { useSession } from "next-auth/react"
-
-
+import { useSession} from 'next-auth/react';
 
 const SideBar = () => {
 
@@ -20,7 +18,8 @@ const SideBar = () => {
     const menuIconsLeft = [home, search, explore, reels, messages, notificatios, create, profile, threads, more]
     const menuIconsBottom = [home, explore, reels, create, messages, profile]
 
-    const { data: session } = useSession();
+    // const { data : session } = useSession(); 
+
 
     return (
         <div className=" h-screen">
@@ -43,7 +42,7 @@ const SideBar = () => {
                 <div className='flex items-center w-64 h-10 ml-2 mt-4' >
                     {reels}
                 </div>
-                {session ? <>
+                 <>
                     <div className='flex items-center w-64 h-10 ml-2 mt-4' >
                         {messages}
                     </div>
@@ -62,7 +61,7 @@ const SideBar = () => {
                     <div className='flex items-center w-64 h-10 ml-2 mt-4' >
                         {more}
                     </div>
-                </> : (<button onClick={ signIn }> Sign In</button>)}
+                </> 
             </div>
         </div>
     );
