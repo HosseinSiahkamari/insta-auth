@@ -1,11 +1,6 @@
-// import Image from 'next/image'
-import instagramLogoText from './../../assets/instagramLogoText.svg'
-import instagramLogo from './../../assets/instagramLogo.svg'
-import next from 'next'
 
 
-
-const SideBar = () => {
+const BottomMenu = () => {
 
     const home = <svg xmlns="http://www.w3.org/2000/svg" className='w-5 h-5 ml-5' height="1em" viewBox="0 0 576 512"><path d="M575.8 255.5c0 18-15 32.1-32 32.1h-32l.7 160.2c0 2.7-.2 5.4-.5 8.1V472c0 22.1-17.9 40-40 40H456c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1H416 392c-22.1 0-40-17.9-40-40V448 384c0-17.7-14.3-32-32-32H256c-17.7 0-32 14.3-32 32v64 24c0 22.1-17.9 40-40 40H160 128.1c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2H104c-22.1 0-40-17.9-40-40V360c0-.9 0-1.9 .1-2.8V287.6H32c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" /></svg>
     const search = <svg xmlns="http://www.w3.org/2000/svg" className='w-5 h-5 ml-5' height="1em" viewBox="0 0 512 512"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" /></svg>
@@ -21,20 +16,16 @@ const SideBar = () => {
     const menuIconsLeft = [home, search, explore, reels, messages, notificatios, create, profile, threads, more]
     const menuIconsBottom = [home, explore, reels, create, messages, profile]
 
-
     return (
-        <div className=" h-screen">
-            {/* <image src={instagramLogoText} className='w-28 ml-7 h-24 xl:block md:hidden sm:hidden ' alt="instagram-logo" />
-            <image src={instagramLogo} className='w-9 ml-5 h-24 xl:hidden md:block transition-transform duration-500' alt="instagram-logo" /> */}
-            <div className=''>
-                {menuIconsLeft.map((item, index) => {
-                    const isLastChild = index === menuIconsLeft.length - 2;
-                    const marginClass = isLastChild ? 'mt-16' : 'mt-4';
-                    return <div className={`flex items-center w-64 h-10 ml-2 ${marginClass}`} key={index}>{item} <p className='xl:block md:ml-5 hidden'>{menuTitle[index]}</p> </div>
-                })}
+        <div>
+            <div className="fixed left-0 bottom-0 w-full flex justify-center  items-center bg-slate-50 h-16 border-t-2 ">
+                <div className='flex justify-between items-center w-full'>
+                    {menuIconsBottom.map((item, index) => {
+                        return <div className='flex justify-center items-center mx-auto' key={index}>{item} </div>
+                    })}
+                </div>
             </div>
-        </div>
-    );
+        </div>);
 }
 
-export default SideBar;
+export default BottomMenu;
