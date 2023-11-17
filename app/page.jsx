@@ -1,4 +1,4 @@
-
+"use client";
 
 import SideMenu from './components/sideMenu/sideMenu';
 import Header from './components/Header/Header';

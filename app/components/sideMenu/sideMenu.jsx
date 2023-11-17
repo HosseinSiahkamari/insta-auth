@@ -1,6 +1,5 @@
-"use client";
-
-import { useSession} from 'next-auth/react';
+"use client"
+import { useSession } from 'next-auth/react';
 
 const SideBar = () => {
 
@@ -17,8 +16,6 @@ const SideBar = () => {
     const menuTitle = ['Home', 'Search', 'Explore', 'Reels', 'Messages', 'Notifications', 'Create', 'Profile', 'Threads', 'More']
     const menuIconsLeft = [home, search, explore, reels, messages, notificatios, create, profile, threads, more]
     const menuIconsBottom = [home, explore, reels, create, messages, profile]
-
-    // const { data : session } = useSession(); 
 
 
     return (
