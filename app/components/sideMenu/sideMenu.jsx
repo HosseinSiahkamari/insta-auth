@@ -31,35 +31,44 @@ const SideBar = async () => {
             <div className=''>
                 <div className='flex items-center w-64 h-10 ml-2 mt-4' >
                     {home}
-                    <h3>home</h3>
+                    <p className='xl:block md:ml-5 hidden'>Home</p>
                 </div>
                 <div className='flex items-center w-64 h-10 ml-2 mt-4' >
                     {search}
+                    <p className='xl:block md:ml-5 hidden'>Search</p>
                 </div>
                 <div className='flex items-center w-64 h-10 ml-2 mt-4' >
                     {explore}
+                    <p className='xl:block md:ml-5 hidden'>Explore</p>
                 </div>
                 <div className='flex items-center w-64 h-10 ml-2 mt-4' >
                     {reels}
+                    <p className='xl:block md:ml-5 hidden'>Reels</p>
                 </div>
                 {session ? <>
                     <div className='flex items-center w-64 h-10 ml-2 mt-4' >
                         {messages}
+                        <p className='xl:block md:ml-5 hidden'>Message</p>
                     </div>
                     <div className='flex items-center w-64 h-10 ml-2 mt-4' >
                         {notificatios}
+                        <p className='xl:block md:ml-5 hidden'>Notifications</p>
                     </div>
                     <div className='flex items-center w-64 h-10 ml-2 mt-4' >
                         {create}
+                        <p className='xl:block md:ml-5 hidden'>Create</p>
                     </div>
                     <div className='flex items-center w-64 h-10 ml-2 mt-4' >
                         {profile}
+                        <p className='xl:block md:ml-5 hidden'>Profile</p>
                     </div>
                     <div className='flex items-center w-64 h-10 ml-2 mt-16' >
                         {threads}
+                        <p className='xl:block md:ml-5 hidden'>Threads</p>
                     </div>
                     <div className='flex items-center w-64 h-10 ml-2 mt-4' >
                         {more}
+                        <p className='xl:block md:ml-5 hidden'>More</p>
                     </div>
                 </> : <h2>please signIn</h2>}
             </div>
