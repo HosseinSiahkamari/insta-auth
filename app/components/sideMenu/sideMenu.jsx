@@ -70,7 +70,7 @@ const SideBar = async () => {
                         {more}
                         <p className='xl:block md:ml-5 hidden'>More</p>
                     </div>
-                </> : <h2>please signIn</h2>}
+                </> : ''}
             </div>
         </div>
     );
