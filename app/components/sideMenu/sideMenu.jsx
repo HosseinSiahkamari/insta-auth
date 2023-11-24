@@ -1,5 +1,7 @@
 import { getServerSession } from "next-auth/next"
 import { options } from './../../api/auth/[...nextauth]/options'
+import SignInButton from './../signInButton/signInButton'
+
 
 const SideBar = async () => {
 
@@ -19,7 +21,8 @@ const SideBar = async () => {
 
     const session = await getServerSession(options);
 
-
+    // console.log(session);
+    
     return (
         <div className=" h-screen">
             <div className='w-full h-20 hidden xl:block pt-10 pl-5 '>
@@ -70,7 +73,8 @@ const SideBar = async () => {
                         {more}
                         <p className='xl:block md:ml-5 hidden'>More</p>
                     </div>
-                </> : ''}
+                </> : <SignInButton/>}
+                
             </div>
         </div>
     );
