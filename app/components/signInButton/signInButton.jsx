@@ -1,6 +1,6 @@
 'use client'
 
-import {signIn , useSession} from 'next-auth/react'
+import {signIn, signOut, useSession} from 'next-auth/react'
 
 const SignInButton = () => {
     const {data: session} = useSession();
@@ -9,11 +9,13 @@ const SignInButton = () => {
     
     if ( session && session.user) {
         return ( 
-            <div>sign out</div>
+            <div>
+                <button onClick={()=> signOut()} className='bg-red-400 rounded-sm px-6 mt-10'>Sign Out</button>
+            </div>
          );
     }else{
         return (<div>
-            <button onClick={()=> signIn("google")} className='bg-red-400 rounded-sm px-6 mt-10'>sign in</button>
+            <button onClick={()=> signIn("google")} className='bg-red-400 rounded-sm px-6 mt-10'>Sign In</button>
         </div>)
     }
 }

@@ -1,6 +1,5 @@
 import { getServerSession } from "next-auth/next"
 import { options } from './../../api/auth/[...nextauth]/options'
-import SignInButton from './../signInButton/signInButton'
 
 
 const SideBar = async () => {
@@ -73,7 +72,7 @@ const SideBar = async () => {
                         {more}
                         <p className='xl:block md:ml-5 hidden'>More</p>
                     </div>
-                </> : <SignInButton/>}
+                </> : ''}
                 
             </div>
         </div>
