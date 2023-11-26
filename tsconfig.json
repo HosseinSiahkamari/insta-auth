@@ -35,7 +35,7 @@
     ".next/types/**/*.ts",
     "app/components/Stories/Stories.jsx",
     "app/components/Suggestions/Suggestions.jsx",
-    "app/page.jsx"
+    "app/page.tsx"
   ],
   "exclude": [
     "node_modules"
