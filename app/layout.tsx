@@ -4,7 +4,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import { getServerSession } from 'next-auth'
 import Providers from './components/Providers'
-import SignInButton from './components/signInButton/signInButton'
+import RecoidContextProvider from './RecoilContextProvider'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -25,7 +25,9 @@ export default async function RootLayout({
       <body className={inter.className}>
         <Providers>
           <main>
-            {children}
+            <RecoidContextProvider>
+              {children}
+            </RecoidContextProvider>
           </main>
         </Providers>
       </body>
