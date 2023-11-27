@@ -5,6 +5,7 @@ import { getServerSession } from "next-auth/next"
 import { options } from './../../api/auth/[...nextauth]/options'
 import { useRecoilState } from "recoil"
 import Create from './Create/page'
+import { modalState } from "@/app/RecoilContextProvider"
 
 
 const SideBar =  () => {
@@ -18,15 +19,15 @@ const SideBar =  () => {
     const profile = <svg xmlns="http://www.w3.org/2000/svg" className='w-5 h-5 ml-5' height="1em" viewBox="0 0 512 512"><path d="M406.5 399.6C387.4 352.9 341.5 320 288 320H224c-53.5 0-99.4 32.9-118.5 79.6C69.9 362.2 48 311.7 48 256C48 141.1 141.1 48 256 48s208 93.1 208 208c0 55.7-21.9 106.2-57.5 143.6zm-40.1 32.7C334.4 452.4 296.6 464 256 464s-78.4-11.6-110.5-31.7c7.3-36.7 39.7-64.3 78.5-64.3h64c38.8 0 71.2 27.6 78.5 64.3zM256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512zm0-272a40 40 0 1 1 0-80 40 40 0 1 1 0 80zm-88-40a88 88 0 1 0 176 0 88 88 0 1 0 -176 0z" /></svg>
     const threads = <svg xmlns="http://www.w3.org/2000/svg" className='w-5 h-5 ml-5' height="1em" viewBox="0 0 448 512"><path d="M331.5 235.7c2.2 .9 4.2 1.9 6.3 2.8c29.2 14.1 50.6 35.2 61.8 61.4c15.7 36.5 17.2 95.8-30.3 143.2c-36.2 36.2-80.3 52.5-142.6 53h-.3c-70.2-.5-124.1-24.1-160.4-70.2c-32.3-41-48.9-98.1-49.5-169.6V256v-.2C17 184.3 33.6 127.2 65.9 86.2C102.2 40.1 156.2 16.5 226.4 16h.3c70.3 .5 124.9 24 162.3 69.9c18.4 22.7 32 50 40.6 81.7l-40.4 10.8c-7.1-25.8-17.8-47.8-32.2-65.4c-29.2-35.8-73-54.2-130.5-54.6c-57 .5-100.1 18.8-128.2 54.4C72.1 146.1 58.5 194.3 58 256c.5 61.7 14.1 109.9 40.3 143.3c28 35.6 71.2 53.9 128.2 54.4c51.4-.4 85.4-12.6 113.7-40.9c32.3-32.2 31.7-71.8 21.4-95.9c-6.1-14.2-17.1-26-31.9-34.9c-3.7 26.9-11.8 48.3-24.7 64.8c-17.1 21.8-41.4 33.6-72.7 35.3c-23.6 1.3-46.3-4.4-63.9-16c-20.8-13.8-33-34.8-34.3-59.3c-2.5-48.3 35.7-83 95.2-86.4c21.1-1.2 40.9-.3 59.2 2.8c-2.4-14.8-7.3-26.6-14.6-35.2c-10-11.7-25.6-17.7-46.2-17.8H227c-16.6 0-39 4.6-53.3 26.3l-34.4-23.6c19.2-29.1 50.3-45.1 87.8-45.1h.8c62.6 .4 99.9 39.5 103.7 107.7l-.2 .2zm-156 68.8c1.3 25.1 28.4 36.8 54.6 35.3c25.6-1.4 54.6-11.4 59.5-73.2c-13.2-2.9-27.8-4.4-43.4-4.4c-4.8 0-9.6 .1-14.4 .4c-42.9 2.4-57.2 23.2-56.2 41.8l-.1 .1z" /></svg>
     const more = <svg xmlns="http://www.w3.org/2000/svg" className='w-5 h-5 ml-5' height="1em" viewBox="0 0 448 512"><path d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" /></svg>
-    const menuTitle = ['Home', 'Search', 'Explore', 'Reels', 'Messages', 'Notifications', 'Create', 'Profile', 'Threads', 'More']
-    const menuIconsLeft = [home, search, explore, reels, messages, notificatios, Create, profile, threads, more]
-    const menuIconsBottom = [home, explore, reels, Create, messages, profile];
+    // const menuTitle = ['Home', 'Search', 'Explore', 'Reels', 'Messages', 'Notifications', 'Create', 'Profile', 'Threads', 'More']
+    // const menuIconsLeft = [home, search, explore, reels, messages, notificatios, Create, profile, threads, more]
+    // const menuIconsBottom = [home, explore, reels, Create, messages, profile];
 
     const session = useSession(options);
-    const [open, setOpen] = useRecoilState(counterState);
+    const [open, setOpen] = useRecoilState(modalState);
 
     // console.log(session);
-    // console.log(open);
+    console.log(open);
     
     return (
         <div className=" h-screen">
@@ -63,7 +64,7 @@ const SideBar =  () => {
                         <p className='xl:block md:ml-5 hidden'>Notifications</p>
                     </div>
                     <div className='flex items-center w-64 h-10 ml-2 mt-4 cursor-pointer'
-                    // onClick={()=> setOpen(true)}
+                    onClick={()=> setOpen(true)}
                     >
                         <Create/>
                         <p className='xl:block md:ml-5 hidden'>Create</p>
