@@ -6,7 +6,7 @@ import Suggestions from './components/Suggestions/Suggestions';
 import Main from './components/main/main';
 import MiniProfile from './components/MiniProfile/MiniProfile'
 import BottomMenu from './components/bottomBar/bottomBar';
-
+import Modal from './components/Modal/page'
 
 function App() {
 
@@ -34,6 +34,7 @@ function App() {
             </div>
           </div>
         </div>
+        <Modal />
       </div>
   );
 }

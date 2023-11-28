@@ -1,9 +1,9 @@
-
+'use client'
 import React from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState, useRef } from "react";
 import { useRecoilState } from "recoil";
-import { modalSate } from "./../atoms/modalAtom";
+import { modalSate } from "./../../RecoilContextProvider";
 import { CameraIcon } from "@heroicons/react/outline";
 import {
     addDoc,

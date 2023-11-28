@@ -26,7 +26,7 @@ const SideBar =  () => {
     const session = useSession(options);
     const [open, setOpen] = useRecoilState(modalState);
 
-    // console.log(session);
+    // console.log(modalState.Create);
     console.log(open);
     
     return (
