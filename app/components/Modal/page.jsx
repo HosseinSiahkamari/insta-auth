@@ -28,7 +28,7 @@ function Modal() {
         if (loading) return;
         setLoading(true);
         const docRef = await addDoc(collection(db, "posts"), {
-            username: session.user.username,
+            username: session.user.name,
             caption: captionRef.current.value,
             profileImg: session.user.image,
             timestamp: serverTimestamp(),
