@@ -3,7 +3,7 @@
 import {atom, RecoilRoot} from 'recoil'
 
 export const modalState = atom({
-    key: 'modalState', 
+    key: 'modalState',
     default: false,
   });
 

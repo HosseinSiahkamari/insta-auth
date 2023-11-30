@@ -28,6 +28,7 @@ const SideBar =  () => {
 
     // console.log(modalState.Create);
     console.log(open);
+    console.log(session);
     
     return (
         <div className=" h-screen">
@@ -54,7 +55,7 @@ const SideBar =  () => {
                     {reels}
                     <p className='xl:block md:ml-5 hidden'>Reels</p>
                 </div>
-                {session ? <>
+                {session.user ? <>
                     <div className='flex items-center w-64 h-10 ml-2 mt-4' >
                         {messages}
                         <p className='xl:block md:ml-5 hidden'>Message</p>

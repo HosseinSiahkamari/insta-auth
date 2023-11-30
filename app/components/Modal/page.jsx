@@ -3,8 +3,8 @@ import React from "react";
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState, useRef } from "react";
 import { useRecoilState } from "recoil";
-import { modalSate } from "./../../RecoilContextProvider";
-import { CameraIcon } from "@heroicons/react/outline";
+import { modalState } from "./../../RecoilContextProvider";
+import { CameraIcon } from "@heroicons/react/24/outline";
 import {
     addDoc,
     collection,
@@ -12,12 +12,12 @@ import {
     serverTimestamp,
     updateDoc,
 } from "firebase/firestore";
-import { db, storage } from "../firebase";
+import { db, storage } from "./../../../firebase";
 import { useSession } from "next-auth/react";
 import { ref, getDownloadURL, uploadString } from "firebase/storage";
 
 function Modal() {
-    const [open, setOpen] = useRecoilState(modalSate);
+    const [open, setOpen] = useRecoilState(modalState);
     const [selectedFile, setSelectedFile] = useState(null);
     const filePickerRef = useRef(null);
     const captionRef = useRef(null);
@@ -104,7 +104,7 @@ function Modal() {
                                     <div
                                         onClick={() => filePickerRef.current.click()}
                                         className="mx-auto flex items-center justify-center h-12 w-12 rounded-full bg-red-100 cursor-pointer"
-                                    >
+                                    > 
                                         <CameraIcon
                                             className="h-6 w-6 text-red-600"
                                             aira-hidden="true"

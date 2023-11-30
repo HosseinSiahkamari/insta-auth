@@ -10,7 +10,7 @@ const SignInButton = () => {
     if ( session && session.user) {
         return ( 
             <div>
-                <button onClick={()=> signOut()} className='text-red-400 text-xs font-semibold cursor-pointer mr-2 flex items-center justify-end'>Sign Out</button>
+                <button onClick={()=> signOut("google")} className='text-red-400 text-xs font-semibold cursor-pointer mr-2 flex items-center justify-end'>Sign Out</button>
             </div>
          );
     }else{
