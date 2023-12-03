@@ -3,7 +3,7 @@
 import SideMenu from './components/sideMenu/sideMenu';
 import Header from './components/Header/Header';
 import Suggestions from './components/Suggestions/Suggestions';
-import Main from './components/main/main';
+import Posts from './components/posts/page';
 import MiniProfile from './components/MiniProfile/MiniProfile'
 import BottomMenu from './components/bottomBar/bottomBar';
 import Modal from './components/Modal/page'
@@ -25,7 +25,7 @@ function App() {
                 <Header />
               </div>
               <div className='w-full md:w-[470px] self-center mt-10 '>
-                <Main />
+                <Posts />
               </div>
             </div>
             <div className='w-96 h-[739px] hidden tablet:block'>
