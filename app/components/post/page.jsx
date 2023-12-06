@@ -1,7 +1,7 @@
 'use client'
 
 
-import { HeartIcon } from "@heroicons/react/24/outline";
+import { HeartIcon, FaceSmileIcon } from "@heroicons/react/24/outline";
 import { HeartIcon as HeartIconFilled } from "@heroicons/react/24/solid"
 import {
     addDoc,
@@ -70,6 +70,10 @@ const Post = ({ id, userImg, userName, img, caption }) => {
         }
       };
 
+      const PostHandler = (event) => {
+        event.preventDefault();
+      }
+
 
     return (
         <div className="flex-col w-full h-auto  mx-auto ">
@@ -108,14 +112,19 @@ const Post = ({ id, userImg, userName, img, caption }) => {
                     <p className='font-semibold'>{userName} </p>
                     <p className='text-sm mt-[2px]'>{caption} </p>
                 </div>
-                <div className='max-w-[468px] flex justify-start pt-2'>
+                <div className='max-w-[468px] mx-auto flex items-start  pt-2'>
                     <p className='text-xs font-bold'>See translation</p>
                 </div>
-                <div className='max-w-[468px] mt-1 flex justify-start '>
+                <div className='max-w-[468px] mt-1 mx-auto flex items-start '>
                     <p className='text-slate-500 text-sm'>View all comments</p>
                 </div >
                 <div className='max-w-[468px] mx-auto'>
-                    <textarea className='h-8 w-full mt-1 text-sm place-content-center' name=" " id="" cols="30" rows="10" placeholder='Add a comment...'></textarea>
+                    <form className="flex justify-center items-center text-sm ">
+                        <input type="text" className='h-8 w-full mt-1 text-sm place-content-center' placeholder="Add a Comment..." />
+                        <button className="font-semibold text-blue-500 mr-3" onClick={PostHandler} >Post</button>
+                        <FaceSmileIcon className="h-5 text-slate-500" />
+                    </form>
+                    {/* <textarea className='h-8 w-full mt-1 text-sm place-content-center' name=" " id="" cols="30" rows="10" placeholder='Add a comment...'></textarea> */}
                 </div>
 
             </div>
