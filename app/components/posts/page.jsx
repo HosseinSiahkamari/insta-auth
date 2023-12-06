@@ -18,8 +18,6 @@ const Posts = () => {
         []
     );
 
-    // console.log(posts[1]);
-
     return (
         <>
             {posts.map((post) => (
