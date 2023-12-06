@@ -23,25 +23,25 @@ import { useSession } from "next-auth/react";
 
 const Post = ({ id, userImg, userName, img, caption }) => {
 
-    // const [comments, setComments] = useState([]);
+    const [comments, setComments] = useState([]);
     const [likes, setLikes] = useState([]);
     const [hasLiked, setHasLiked] = useState(false);
-    // const [comment, setComment] = useState("");
+    const [comment, setComment] = useState("");
     const { data: session } = useSession();
 
-    // useEffect(
-    //     () =>
-    //         onSnapshot(
-    //             query(
-    //                 collection(db, "posts", id, "comments"),
-    //                 orderBy("timestamp", "desc")
-    //             ),
-    //             (snapshot) => setComments(snapshot.docs)
-    //         ),
-    //     [db]
-    // );
+    useEffect(
+        () =>
+            onSnapshot(
+                query(
+                    collection(db, "posts", id, "comments"),
+                    orderBy("timestamp", "desc")
+                ),
+                (snapshot) => setComments(snapshot.docs)
+            ),
+        [db]
+    );
 
-    // console.log(comments);
+    console.log(comments);
 
     useEffect(
         () =>
@@ -59,6 +59,7 @@ const Post = ({ id, userImg, userName, img, caption }) => {
           ),
         [likes]
       );
+    //   console.log(session.user.uid);
       const likedPost = async () => {
         if (hasLiked) {
           await deleteDoc(doc(db, "posts", id, "likes", session.user.uid));
