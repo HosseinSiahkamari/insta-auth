@@ -22,7 +22,7 @@ function App() {
           <div className='flex justify-start md:justify-center  '>
             <div id='s25' className=' flex flex-col mx-auto w-full md:w-[630px]'>
               <div className='w-full  md:w-[630px] self-start'>
-                <Header />
+               <Header />
               </div>
               <div className='w-full md:w-[470px] self-center mt-10 '>
                 <Posts />
