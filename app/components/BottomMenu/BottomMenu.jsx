@@ -1,6 +1,6 @@
 'use client'
 
-import Create from './../SideMenu/Create/page';
+// import Create from './../SideMenu/Create/page';
 import { modalState } from "@/app/RecoilContextProvider";
 import { useRecoilState } from "recoil";
 import { signOut, useSession, signIn } from "next-auth/react"
@@ -31,7 +31,7 @@ const BottomMenu = () => {
                     <div className='flex justify-center items-center mx-auto'>{home} </div>
                     <div className='flex justify-center items-center mx-auto'>{explore} </div>
                     <div className='flex justify-center items-center mx-auto'>{reels} </div>
-                    {session && session.user ? <><div className='flex justify-center items-center mx-auto cursor-pointer' onClick={() => setOpen(true)}><Create /> </div>
+                    {session && session.user ? <><div className='flex justify-center items-center mx-auto cursor-pointer' onClick={() => setOpen(true)}> </div>
                         <div className='flex justify-center items-center mx-auto'>{messages} </div></> : ''}
                     <div className='flex justify-center items-center mx-auto cursor-pointer' onClick={signInHandler}>
                         {session && session.user ? <img src={session?.user?.image} className="rounded-full h-6 ml-5" alt="" /> : <UserCircleIcon className='w-6 h-6 ml-5' />}
