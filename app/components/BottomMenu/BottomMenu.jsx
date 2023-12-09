@@ -1,6 +1,6 @@
 'use client'
 
-import Create from '../SideMenu/Create/page';
+import Create from './../SideMenu/Create/page';
 import { modalState } from "@/app/RecoilContextProvider";
 import { useRecoilState } from "recoil";
 import { signOut, useSession, signIn } from "next-auth/react"

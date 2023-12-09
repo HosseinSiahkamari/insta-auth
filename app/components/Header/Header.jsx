@@ -1,4 +1,4 @@
-import Stories from "../Stories/Stories"
+import Stories from "./../Stories/Stories"
 
 
 const Header = () => {
