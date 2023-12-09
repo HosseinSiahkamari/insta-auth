@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "ES6",
     "lib": [
       "dom",
       "dom.iterable",
@@ -35,10 +35,14 @@
     ".next/types/**/*.ts",
     "app/components/Stories/Stories.jsx",
     "app/components/Suggestions/Suggestions.jsx",
-    "app/page.tsx"
-, "app/api/auth/[...nextauth]/options.ts"  ],
+    "app/page.tsx",
+    "app/api/auth/[...nextauth]/options/options.ts",
+    "app/components/Header/Header.jsx",
+    "app/components/post/page.jsx",
+    ".next/types/app/components/post/page.jsx"
+, "app/components/posts/page.jsx"  ],
   "exclude": [
     "node_modules"
   ],
-    "jsx": "react/jsx-runtime"
+  "jsx": "react/jsx-runtime"
 }

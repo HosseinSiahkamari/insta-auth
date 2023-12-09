@@ -2,9 +2,7 @@
 
 import { faker } from '@faker-js/faker';
 import { useEffect, useState } from 'react';
-import Story from '../Story/Story'
-
-
+import Story from '../Story/Story';
 
 const Stories = () => {
     const [suggestion, setSuggestion] = useState([]);
@@ -53,7 +51,6 @@ const Stories = () => {
     const slideLeftHandler = () => {
         const rowSlideRight = document.getElementById('dynamicID');
         const scrollAmount = 10; // میزان اسکرول به هر بار
-        const scrollSpeed = 1; // سرعت اسکرول
         const targetScrollLeft = rowSlideRight.scrollLeft - 295; // مقدار مورد نظر برای اسکرول به سمت چپ
         setStoryBarPosition(targetScrollLeft);
 

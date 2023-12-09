@@ -1,9 +1,9 @@
 'use client'
 
-import Post from './../post/page'
+import Post from '../post/page'
 import { useState, useEffect } from "react";
 import { collection, onSnapshot, orderBy, query } from "firebase/firestore";
-import { db } from "./../../../firebase";
+import { db } from "../../../firebase";
 
 
 const Posts = () => {

@@ -14,10 +14,9 @@ import {
     serverTimestamp,
     setDoc
 } from "firebase/firestore";
-import { db } from "./../../../firebase";
+import { db } from "../../../firebase";
 import { useEffect, useState } from "react";
 import { useSession } from "next-auth/react";
-
 
 
 const Post = ({ id, userImg, userName, img, caption }) => {
@@ -47,7 +46,7 @@ const Post = ({ id, userImg, userName, img, caption }) => {
                 setLikes(snapshot.docs)
             ),
 
-        [db, id]
+        [db,id]
     );
 
     useEffect(

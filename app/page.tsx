@@ -1,10 +1,10 @@
 
-import SideMenu from './components/sideMenu/sideMenu';
+import SideMenu from './components/SideMenu/SideMenu';
 import Header from './components/Header/Header';
 import Suggestions from './components/Suggestions/Suggestions';
 import Posts from './components/posts/page';
 import MiniProfile from './components/MiniProfile/MiniProfile'
-import BottomMenu from './components/bottomBar/bottomBar';
+import BottomMenu from './components/BottomMenu/BottomMenu';
 import Modal from './components/Modal/page'
 
 function App() {

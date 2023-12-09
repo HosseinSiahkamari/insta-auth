@@ -9,7 +9,6 @@ const MiniProfile = () => {
     const { data: session } = useSession();
     const isImageAvailable = session?.user?.image;
 
-
     return (
         <div className="flex ml-10 h-12 w-full mt-10">
             <div className="flex justify-start h-12 w-2/3">
