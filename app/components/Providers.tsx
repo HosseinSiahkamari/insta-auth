@@ -8,8 +8,7 @@ interface Props {
 }
 
 const Providers = (props: Props) => {
-    return
-    <SessionProvider basePath="/api/auth">
+    return <SessionProvider basePath="/api/auth">
         {props.children}
     </SessionProvider>
 }
