@@ -1,5 +1,5 @@
 
-// import SideMenu from './components/SideMenu/SideMenu';
+import SideMenu from './components/SideMenu/SideMenu';
 import Header from './components/Header/Header';
 import Suggestions from './components/Suggestions/Suggestions';
 import Posts from './components/posts/page';
@@ -12,7 +12,7 @@ function App() {
   return (
     <div className='flex overflow-x-clip' >
       <div className=' md:w-20 xl:w-60 fixed  md:h-screen border-r-2 hidden w816:block left-0'>
-        {/* <SideMenu /> */}
+        <SideMenu />
       </div>
       <div className='block md:hidden left-0'>
         <BottomMenu />

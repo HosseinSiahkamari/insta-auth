@@ -1,4 +1,4 @@
-// import Stories from "./../Stories/Stories"
+import Stories from "./../Stories/Stories"
 
 
 const Header = () => {
@@ -30,7 +30,7 @@ const Header = () => {
                 </div>
             </div>
             <div className="w-full mx-auto">
-                {/* <Stories /> */}
+                <Stories />
             </div>
         </div>
     );
