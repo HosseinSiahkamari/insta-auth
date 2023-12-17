@@ -10,6 +10,9 @@ const nextConfig = {
         // !! WARN !!
         ignoreBuildErrors: true,
       },
+      experimental: {
+        serverComponents: false,
+      },
 }
 
 module.exports = nextConfig
