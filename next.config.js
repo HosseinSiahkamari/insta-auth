@@ -9,10 +9,8 @@ const nextConfig = {
         // your project has type errors.
         // !! WARN !!
         ignoreBuildErrors: true,
-    },
-    experimental: {
-        serverComponentsExternalPackages: false,
-    },
+    }
+
 }
 
 module.exports = nextConfig
