@@ -1,7 +1,0 @@
-{
-    "version": 2,
-    "routes": [{ "handle": "vercel", "src": "/(.*)" }],
-    "env": { "NEXTAUTH_URL": "https://your-vercel-app.vercel.app" },
-    "functions": { "api/auth/*": { "runtime": "nodejs14.x" } }
-  }
-  
