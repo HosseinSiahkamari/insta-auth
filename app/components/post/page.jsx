@@ -46,7 +46,7 @@ const Post = ({ id, userImg, userName, img, caption }) => {
                 setLikes(snapshot.docs)
             ),
 
-        [db,id]
+        [db, id]
     );
 
     useEffect(
@@ -137,7 +137,7 @@ const Post = ({ id, userImg, userName, img, caption }) => {
                     ))}
                 </div>
                 }
-                <div className='max-w-[468px] mx-auto'>
+                <div className='max-w-[468px] mx-auto mb-24'>
                     {session && <form className="flex justify-center items-center text-sm border-b-2 pb-2 ">
                         <input onChange={(e) => setComment(e.target.value)} value={comment} type="text" className='focus:outline-none h-8 w-full mt-1 text-sm place-content-center' placeholder="Add a comment..." />
                         {comment.length > 0 ? <button onClick={sendCommentHandler} type="submit" className="font-semibold  text-blue-500 mr-3"  >Post</button> : ''}
