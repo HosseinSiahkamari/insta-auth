@@ -1,11 +1,11 @@
-Instagram Clone Project
+<h2>Instagram Clone Project</h2>
 
 Welcome to the Instagram Clone repository! 
 
 This project showcases my expertise in web development, employing React, Tailwind CSS, and Firebase. The goal was to create a fully responsive and dynamic clone of Instagram.
 
-<h3>Project Highlights:</h3>
-Fully Responsive Design: The project boasts a fully responsive and adaptive design, ensuring optimal user experience across various devices and screen sizes.
+<h4>Project Highlights:</h4>
+<p class = 'bold' >Fully Responsive Design</p>: The project boasts a fully responsive and adaptive design, ensuring optimal user experience across various devices and screen sizes.
 
 Authentication Capability: Incorporates robust authentication features, providing users with secure access to the platform and protecting their personal information.
 
