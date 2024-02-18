@@ -8,5 +8,5 @@ This project showcases my expertise in web development, Next Js, Tailwind CSS, a
 <h4>Authentication Capability:</h4> Incorporates robust authentication features, providing users with secure access to the platform and protecting their personal information.
 <h4>Online Database Storage:</h4>  Enables seamless storage of data in an online database, ensuring accessibility and reliability of stored information.
 
-<br>
+<hr>
 Open https://insta-auth-alpha.vercel.app with your browser to see the result.
